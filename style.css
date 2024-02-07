@@ -7,15 +7,15 @@ body {
   margin: 15rem auto;
   transform-style: preserve-3d;
   perspective: 10000px;
-  animation: spin 5s linear infinite;
   transition: all 2s ease;
+  animation: spin 5s linear infinite;
 }
 @keyframes spin {
   from {
-    transform: rotateY(0deg) rotateX(0deg);
+    transform: rotateX(-15deg) rotateY(0deg);
   }
   to {
-    transform: rotateY(360deg) rotateX(360deg);
+    transform: rotateX(-15deg) rotateY(360deg);
   }
 }
 .front {
@@ -78,68 +78,26 @@ body {
   background: rgb(0, 190, 200, .5);
   transform: rotateX(-90deg) translateZ(2.5rem);
 }
-.cube2 {
+.shadow {
   position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  margin: 1.7rem 1.7rem;
-  transform-style: preserve-3d;
-  perspective: 10000px;
-  animation: spin2 2.5s linear infinite;
+  height: 5rem;
+  width: 5rem;
+  color: black;
+  box-shadow: inset 0 0 15px 5px rgb(0, 245, 255);
+  text-align: center;
+  line-height: 5rem;
+  background: rgb(0, 245, 255);
+  transform: rotateX(-90deg) translateZ(3.5rem);
+  animation: sp 4s linear infinite;
 }
-@keyframes spin2 {
-  from {
-    transform: rotateY(0deg) rotateX(0deg);
+@keyframes sp {
+  0% {
+    filter: blur(25px);
   }
-  to {
-    transform: rotateY(360deg) rotateX(360deg);
+  50% {
+    filter: blur(50px);
   }
-}
-.front2 {
-  position: absolute;
-  height: 1.49rem;
-  width: 1.5rem;
-  box-shadow: 0 0 5px 5px white;
-  background: rgb(255, 255, 255);
-  transform: translateZ(0.75rem);
-}
-.back2 {
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  box-shadow: 0 0 5px 5px white;
-  background: rgb(255, 255, 255);
-  transform: rotateY(180deg) translateZ(0.75rem);
-}
-.right2 {
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  box-shadow: 0 0 5px 5px white;
-  background: rgb(255, 255, 255);
-  transform: rotateY(90deg) translateZ(0.75rem);
-}
-.left2 {
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  box-shadow: 0 0 5px 5px white;
-  background: rgb(255, 255, 255);
-  transform: rotateY(-90deg) translateZ(0.75rem);
-}
-.top2 {
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  box-shadow: 0 0 5px 5px white;
-  background: rgb(255, 255, 255);
-  transform: rotateX(90deg) translateZ(0.75rem);
-}
-.bottom2 {
-  position: absolute;
-  height: 1.5rem;
-  width: 1.5rem;
-  box-shadow: 0 0 5px 5px white;
-  background: rgb(255, 255, 255);
-  transform: rotateX(-90deg) translateZ(0.75rem);
+  100% {
+    filter: blur(25px);
+  }
 }
