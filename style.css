@@ -128,9 +128,6 @@ body {
     filter: blur(25px);
   }
 }
-.op {
-  animation: spin 2.5s linear infinite forwards;
-}
 .op1 {
   transform: translateZ(5.5rem);
 }

@@ -1,4 +1,3 @@
-const cube = document.getElementById('cube')
 const button = document.getElementById('btn')
 const piece1 = document.getElementById('piece1')
 const piece2 = document.getElementById('piece2')
@@ -11,7 +10,6 @@ const piece7 = document.getElementById('piece7')
 button.addEventListener('click', () => {
     if (button.innerText == "Open Cube") {
         button.innerText = "Close Cube"
-        cube.classList.add('op')
         piece1.classList.add('op1')
         piece2.classList.add('op2')
         piece3.classList.add('op3')
@@ -22,7 +20,6 @@ button.addEventListener('click', () => {
     }
     else if (button.innerText == "Close Cube") {
         button.innerText = "Open Cube"
-        cube.classList.remove('op')
         piece1.classList.remove('op1')
         piece2.classList.remove('op2')
         piece3.classList.remove('op3')
